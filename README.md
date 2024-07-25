@@ -1,7 +1,7 @@
 https://fastapi.tiangolo.com/ko/python-types/<br>
 https://velog.io/@cho876/%EC%9A%94%EC%A6%98-%EB%9C%A8%EA%B3%A0%EC%9E%88%EB%8B%A4%EB%8A%94-FastAPI
 https://wikidocs.net/175092
-
+https://velog.io/@shangrilar/FastAPI-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0
 
 
 # FastAPI란?
@@ -21,13 +21,15 @@ django나 flask로 API를 못만드는 것은 아니다. 다만, API를 작성�
 uvicorn은 async/await을 기반한 비동기 프로그래밍 지원, 퍼포먼스가 가장 좋다고 알려진 ASGI이다.
 본 페이지 내, 실행 결과에 대해 확인하기 위한 용도로 설치
 
-
-###  Pydantic
-`BaseModel`은 라이브러리의 클래스로, 데이터 유효성 검사 및 설정을 위해 사용된다.<br>
-Pydantic은 FastAPI와 함께 사용되며, FastAPI는 이를 통해 요청 데이터의 유효성 검사를 자동으로 처리한다.
-
 `uvicorn main:app --reload`
 `univorn`: 서버 실행을 위해 기본적으로 기재해야하는 명령어
 `main`: 실행할 초기 파이썬 파일 이름. 만약 실행 소스코드 파일 이름이 index.py였다면 index:app으로 수정해줘야 한다.
 `app`: FastAPI()모듈을 할당한 객체명을 기재한다. 만약, start=FastAPI()라고 위에서 실행했었다면 여기서도 main:start라고 기재해줘야 정상 실행한다.
 `reload`: 소스코드가 변경되었을 시, 서버를 자동으로 재시작해주는 옵션
+
+uvicorn으로 app 실행 후 swagger 페이지 보려면 뒤에 `/docs` 붙이면 됨.
+
+
+###  Pydantic
+`BaseModel`은 라이브러리의 클래스로, 데이터 유효성 검사 및 설정을 위해 사용된다.<br>
+Pydantic은 FastAPI와 함께 사용되며, FastAPI는 이를 통해 요청 데이터의 유효성 검사를 자동으로 처리한다.
